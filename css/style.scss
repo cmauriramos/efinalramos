@@ -48,7 +48,7 @@ ul {
     }
 
     a {
-        color: #1a1502;
+        color: #000000;
     }
 }
 
@@ -140,7 +140,9 @@ ul {
 
 
 .pie-pagina {
-    background-color: rgb(124, 151, 151);
+    //background-color: rgb(124, 151, 151);
+    background: rgb(130, 123, 47);
+    background: linear-gradient(180deg, rgba(130, 123, 47, 1) 0%, rgba(181, 154, 18, 1) 100%, rgba(212, 177, 37, 1) 100%);
     margin: 60px;
 
     ul {
@@ -207,5 +209,44 @@ $estilos: (
         text-align: map-get($estilos, alineacion);
         padding: map-get($estilos, espace);
         font-size: map-get($estilos, fonsize);
+    }
+}
+
+
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin: 50px 40px;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    width: calc(150px *24);
+    -webkit-animation: scroll 10s linear infinite;
+
+
+}
+
+.slider .slide {
+    width: 100px;
+
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-100px * 6));
+        transform: translateX(calc(-100px * 6));
     }
 }

@@ -35,7 +35,7 @@ ul li {
   margin: 10px 70px;
 }
 ul a {
-  color: #1a1502;
+  color: #000000;
 }
 
 .nuestras h2 {
@@ -107,7 +107,8 @@ ul a {
 }
 
 .pie-pagina {
-  background-color: rgb(124, 151, 151);
+  background: rgb(130, 123, 47);
+  background: linear-gradient(180deg, rgb(130, 123, 47) 0%, rgb(181, 154, 18) 100%, rgb(212, 177, 37) 100%);
   margin: 60px;
 }
 .pie-pagina ul li {
@@ -156,6 +157,40 @@ ul a {
   background-color: #FFFFFF;
   text-align: center;
   padding: 1rem;
+}
+
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  margin: 50px 40px;
+}
+
+.slider .slide-track {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  width: 3600px;
+  -webkit-animation: scroll 10s linear infinite;
+}
+
+.slider .slide {
+  width: 100px;
+}
+
+.slider .slide img {
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-600px);
+    transform: translateX(-600px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
